@@ -1,0 +1,37 @@
+###
+
+# curl http://localhost:8080/albums
+#    --include
+#    --header "Content-Type: application/json"
+#    --request "POST"
+#    --data '{"id": "4","title": "The Modern Sound of Betty Carter","artist": "Betty Carter","price": 49.99}'
+POST http://localhost:8080/albums
+Content-Type: application/json
+
+{
+  "id": "4",
+  "title": "The Modern Sound of Betty Carter",
+  "artist": "Betty Carter",
+  "price": 49.99
+}
+
+###
+# Показване на всички албуми
+GET http://localhost:8080/albums
+###
+# Показване на албум по :id
+GET http://localhost:8080/albums/1
+###
+# Изтриване на албум по :id
+DELETE http://localhost:8080/albums/2
+###
+# Обновяване на албум по :id
+PUT http://localhost:8080/albums/4
+Content-Type: application/json
+
+{
+  "id": "4",
+  "title": "The Modern Sound of Betty Carter",
+  "artist": "Betty Carter",
+  "price": 200000
+}
